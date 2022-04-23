@@ -1,0 +1,36 @@
+﻿<Page x:Class="MedicalClinic.AppPage.PatientWindowPage.MedcardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"      
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedicalClinic.AppPage.PatientWindowPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      Title="MedcardPage">
+
+    <Grid>
+        <StackPanel x:Name="ConclusionsList">
+            <ListView x:Name="Conclusions" SelectionChanged="ConclusionClick">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding NameOfDoctor}"
+                                            Header="Имя врача"
+                                            Width="200"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Speciality}"
+                                            Header="Врач"
+                                            Width="150"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding DateOfMeeting}"
+                                            Header="Дата приема"
+                                            Width="250"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <Label x:Name="ErrorConclusions"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="30"
+               FontWeight="Bold"
+               Content="Нет информации"/>
+    </Grid>
+</Page>

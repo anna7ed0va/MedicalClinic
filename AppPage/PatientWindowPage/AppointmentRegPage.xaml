@@ -1,0 +1,124 @@
+﻿<Page x:Class="MedicalClinic.AppPage.PatientWindowPage.AppointmentRegPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedicalClinic.AppPage.PatientWindowPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      Title="AppointmentPage">
+
+    <Grid>
+        <TextBlock x:Name="ErrorState"
+                   Text="К сожалению, невозможно сделать запись"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Visibility="Hidden"/>
+        <ScrollViewer x:Name="WorkState">
+            <StackPanel Margin="20">
+                <TextBlock Margin="0 0 0 20"
+                           Text="Новая запись"
+                           FontSize="27"
+                           FontWeight="Bold"/>
+                <StackPanel Width="400">
+                    <StackPanel x:Name="SpecialityBlock">
+                        <Label Content="Выберите специлиста:"
+                               FontSize="15"
+                               Margin="0 10"/>
+                        <ComboBox x:Name="SpecialitiesField"
+                                  materialDesign:HintAssist.Hint="Специалист"
+                                  Margin="0 10"
+                                  SelectionChanged="ComboBoxSpecialityItemSelect">
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel x:Name="MainBlock"
+                                IsEnabled="False">
+                        <Label Content="Выберите врача:"
+                               FontSize="15"
+                               Margin="0 10"/>
+                        <ComboBox x:Name="DoctorsField"
+                                  materialDesign:HintAssist.Hint="Врач"
+                                  SelectionChanged="ComboBoxDoctorItemSelect">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="0" 
+                                               Source="{Binding PhotoOfUser}"
+                                               MaxHeight="120"/>
+                                        <StackPanel Orientation="Horizontal"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center"
+                                                    Grid.Column="1"
+                                                    Margin="30 0 0 0">
+                                            <Label Content="{Binding Surname}"
+                                                   FontSize="17"/>
+                                            <Label Content="{Binding Name}"
+                                                   FontSize="17"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <StackPanel x:Name="DTPickersBlock"
+                                    Visibility="Hidden"
+                                    IsEnabled="False">
+                            <Label Content="Комментарий (необязательно):"
+                               FontSize="15"
+                               Margin="0 10"/>
+                            <TextBox x:Name="DescriptionOfAppointment"
+                                 Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                                 TextWrapping="Wrap"
+                                 Height="100"
+                                 MaxLength="100"
+                                 Width="250"
+                                 HorizontalAlignment="Left"
+                                 FontSize="14"/>
+                            <Label Content="Выберите дату приема:"
+                               FontSize="15"
+                               Margin="0 10"/>
+                            <DatePicker x:Name="DateOfAppointment"
+                                        Width="120"
+                                        HorizontalAlignment="Left"
+                                        materialDesign:HintAssist.Hint="Выбрать дату"
+                                        Language="ru-RU" 
+                                        IsTodayHighlighted="False"
+                                        SelectedDateChanged="DateOfAppointmentItemSelect"/>
+                            <StackPanel x:Name="TimeOfAppointmentField"
+                                        Visibility="Hidden"
+                                        IsEnabled="False">
+                                <Label Content="Выбрать время приема:"
+                                       FontSize="15"
+                                       Margin="0 10"/>
+                                <ComboBox x:Name="TimeOfAppointment"
+                                  materialDesign:HintAssist.Hint="Выберете время"
+                                  Width="120"
+                                  HorizontalAlignment="Left">
+                                </ComboBox>
+                            </StackPanel>
+                            <Label x:Name="ErrorTimeApplointment"
+                                   Content="К сожалению, на этот день нет свободных мест"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Visibility="Hidden"
+                                   IsEnabled="False"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Button x:Name="ConfirmAppointmentButton"
+                            Click="ConfirmAppointmentButtonClick"
+                            Content="Записаться"      
+                            Margin="0 5"                            
+                            Width="200"
+                            Visibility="Hidden"
+                            IsEnabled="False" Cursor="Hand"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

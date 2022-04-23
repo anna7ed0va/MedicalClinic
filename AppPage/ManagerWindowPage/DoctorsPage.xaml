@@ -1,0 +1,44 @@
+﻿<Page x:Class="MedicalClinic.AppPage.ManagerWindowPage.DoctorsPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedicalClinic.AppPage.ManagerWindowPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      Title="DoctorsPage">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel x:Name="DoctorsTable"
+                    Margin="10 20"
+                        MaxWidth="800">
+                <ListView x:Name="Doctors" SelectionChanged="DoctorsClick">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding NameOfDoctor}"
+                                            Header="Имя врача"
+                                            Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Speciality}"
+                                            Header="Специальность"
+                                            Width="150"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Login}"
+                                            Header="Логин"
+                                            Width="150"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding AbsentDate}"
+                                            Header="Дата отсутствия"
+                                            Width="170"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+        <Label x:Name="ErrorDoctors"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="30"
+               FontWeight="Bold"
+               Content="Нет сотрудников"/>
+    </Grid>
+</Page>

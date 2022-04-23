@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4f6579eb36c9449a9d21f851aeadd73f" Name="Diagram1">
+        <EntityTypeShape EntityType="MClinicModel.Anamnesis" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.Appointment" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.Conclusion" Width="1.5" PointX="10.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.Doctor" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.Examination" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.Manager" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.MedCard" Width="1.5" PointX="3.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.Patient" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.PersonalData" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.Speciality" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MClinicModel.User" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="MClinicModel.FK_Conclusion_Anamnesis" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Appointment_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Appointment_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Conclusion_Appointment" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Conclusion_Examination" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Conclusion_MedCard" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Doctor_PersonalData" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Doctor_Speciality" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Doctor_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Manager_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Patient_MedCard" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Patient_PersonalData" ManuallyRouted="false" />
+        <AssociationConnector Association="MClinicModel.FK_Patient_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

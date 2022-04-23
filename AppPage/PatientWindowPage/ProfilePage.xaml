@@ -1,0 +1,61 @@
+﻿<Page x:Class="MedicalClinic.AppPage.PatientWindowPage.ProfilePage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedicalClinic.AppPage.PatientWindowPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      Title="ProfilePage">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="20">
+                <materialDesign:PackIcon Kind="AccountBox"
+                                         Width="50"
+                                         Height="50"/>
+                <Label Content="Логин:"
+                   FontSize="18"/>
+                <Label x:Name="LabelLogin"
+                   FontSize="15"
+                   Margin="40 0"/>
+                <Label Content="Пароль:"
+                   FontSize="18"/>
+                <Label x:Name="LabelPassword"
+                   FontSize="15"
+                   Margin="40 0"/>
+                <Label Content="Имя:"
+                   FontSize="18"/>
+                <Label x:Name="LabelName"
+                   FontSize="15"
+                   Margin="40 0"/>
+                <Label Content="Фамилия:"
+                   FontSize="18"/>
+                <Label x:Name="LabelSurname"
+                   FontSize="15"
+                   Margin="40 0"/>
+                <Label Content="Пол:"
+                   FontSize="18"/>
+                <Label x:Name="LabelSex"
+                   FontSize="15"
+                   Margin="40 0"/>
+                <Label Content="Дата рождения:"
+                   FontSize="18"/>
+                <Label x:Name="LabelDateOfBirth"
+                   FontSize="15"
+                   Margin="40 0"/>
+                <Label Content="Телефон:"
+                   FontSize="18"/>
+                <Label x:Name="LabelPhone"
+                   FontSize="15"
+                   Margin="40 0"/>
+                <Label Content="E-mail:"
+                   FontSize="18"/>
+                <Label x:Name="LabelEmail"
+                   FontSize="15"
+                   Margin="40 0"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,126 @@
+﻿<Window x:Class="MedicalClinic.Windows.ConclusionResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedicalClinic.Windows"
+        mc:Ignorable="d"
+        Title="ConclusionResultWindow" Height="550" Width="950"
+        WindowStartupLocation="CenterScreen"        
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="40"
+                        HorizontalAlignment="Center"
+                        Width="700">
+                <TextBlock Margin="0 0 0 20"
+                           Text="Заключение"
+                           FontSize="27"
+                           FontWeight="Bold"/>
+                <StackPanel Width="550">
+                    <Label Content="Рекомендации:"
+                           FontSize="18"
+                           FontWeight="Bold"/>
+                    <StackPanel Width="500">
+                        <TextBlock x:Name="Complaints"
+                                   HorizontalAlignment="Left"
+                                   Width="300"
+                                   FontSize="14">
+                        </TextBlock>
+                    </StackPanel>
+                    <Label Content="Анамнез:"
+                           FontSize="18"
+                           FontWeight="Bold"/>
+                    <StackPanel Width="500">
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox x:Name="Allergy"
+                                      Content="Алергия"
+                                      FontSize="14"
+                                      IsHitTestVisible="False"
+                                      Focusable="False"/>
+                            <CheckBox x:Name="CHD"
+                                      Content="ІХС"
+                                      FontSize="14"
+                                      IsHitTestVisible="False"
+                                      Focusable="False"/>
+                            <CheckBox x:Name="Convulsion"
+                                      Content="Конвульсии"
+                                      FontSize="14"
+                                      IsHitTestVisible="False"
+                                      Focusable="False"/>
+                            <CheckBox x:Name="Diabetes"
+                                      Content="Дмабет"
+                                      FontSize="14"
+                                      IsHitTestVisible="False"
+                                      Focusable="False"/>
+                            <CheckBox x:Name="Onco"
+                                      Content="Онкологии"
+                                      FontSize="14"
+                                      IsHitTestVisible="False"
+                                      Focusable="False"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Label Content="Данные:"
+                           FontSize="18"
+                           FontWeight="Bold"/>
+                    <StackPanel Width="500">
+                        <Label Content="Температура тела:"
+                               FontSize="16"/>
+                        <TextBlock x:Name="BodyTemperature"
+                                   HorizontalAlignment="Left"
+                                   Width="300"
+                                   FontSize="14">
+                        </TextBlock>
+                        <Label Content="Артериальное давление:"
+                               FontSize="16"/>
+                        <TextBlock x:Name="BloodPresure"
+                                   HorizontalAlignment="Left"
+                                   Width="300"
+                                   FontSize="14">
+                        </TextBlock>
+                        <Label Content="Пульс:"
+                               FontSize="16"/>
+                        <TextBlock x:Name="Pulse"
+                                   HorizontalAlignment="Left"
+                                   Width="300"
+                                   FontSize="14">
+                        </TextBlock>
+                        <Label Content="Частота дыхания"
+                               FontSize="16"/>
+                        <TextBlock x:Name="RespiratoryRate"
+                                   HorizontalAlignment="Left"
+                                   Width="300"
+                                   FontSize="14">
+                        </TextBlock>
+                    </StackPanel>
+                    <Label Content="Данные дополнительных методов обследования:"
+                           FontSize="18"
+                           FontWeight="Bold"/>
+                    <StackPanel Width="500">
+                        <TextBlock x:Name="AdditionalInfo"
+                                   HorizontalAlignment="Left"
+                                   Width="300"
+                                   FontSize="14">
+                        </TextBlock>
+                    </StackPanel>
+                    <Label Content="Назначение:"
+                           FontSize="18"
+                           FontWeight="Bold"/>
+                    <StackPanel Width="500">
+                        <TextBlock x:Name="ConclusionResult"
+                                   HorizontalAlignment="Left"
+                                   Width="300"
+                                   FontSize="14">
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <Button Content="Вернуться назад"
+                        Width="200"
+                        Margin="0 10"
+                        Click="CancelClick" Cursor="Hand"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
+

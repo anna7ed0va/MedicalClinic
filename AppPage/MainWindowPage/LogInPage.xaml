@@ -1,0 +1,33 @@
+﻿<Page x:Class="MedicalClinic.AppPage.MainWindowPage.LogInPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedicalClinic.AppPage.MainWindowPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      Title="LogInPage">
+
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Margin="0 0 0 20"
+                           Text="Вход"
+                           FontSize="27"
+                           FontWeight="Bold"/>
+            <TextBox x:Name="LoginText"    
+                     materialDesign:HintAssist.Hint="Введите логин"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     MaxWidth="400"/>
+            <PasswordBox x:Name="PasswordText"
+                         materialDesign:HintAssist.Hint="Введите пароль"
+                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                         MaxWidth="400"/>
+            <Button Click="EnterClick"
+                    Width="300"
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    Content="Войти" Cursor="Hand"/>
+        </StackPanel>
+    </Grid>
+</Page>
